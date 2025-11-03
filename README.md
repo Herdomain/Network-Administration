@@ -20,7 +20,7 @@ Using Nmap for active scanning and Wireshark for traffic capture, I collected de
 
 - Nmap: For active scanning and device enumeration
 - Wireshark: For passive packet capture and protocol analysis
-- VirtualBox: For lab environment deployment and simulationnarios.
+- VirtualBox: For lab environment deployment and simulation scenarios.
 
 ## Steps
 drag & drop screenshots here or use imgur and reference them using imgsrc
