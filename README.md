@@ -9,7 +9,9 @@ The results were compiled into a structured report that includes an asset invent
 ## Objective
 
 The primary goal of this project was to identify, verify, and document all devices operating within a virtual lab network.
-Using Nmap for active scanning and Wireshark for traffic capture, I collected detailed information on each device’s configuration, services, and communication activity. Each data point was validated through direct examination and cross-referenced between tools to ensure accuracy. The final deliverable was a structured report presenting this information in a format suitable for internal auditing, policy development, and compliance documentation.
+Using Nmap for active scanning and Wireshark for traffic capture, I collected detailed information on each device’s configuration, services, and communication activity. Each data point was validated through direct examination and cross-referenced between tools to ensure accuracy. 
+
+The final deliverable was a structured report presenting this information in a format suitable for internal auditing, policy development, and compliance documentation.
 
 ### Skills Learned
 
@@ -18,17 +20,27 @@ Using Nmap for active scanning and Wireshark for traffic capture, I collected de
 - Captured and interpreted network traffic to understand communication patterns, detect anomalies, and trace service activity using Wireshark.
 - Applied knowledge of IPv4 architecture and subnetting to propose efficient and secure network segmentation.
 
+### Virtual Machine Setup
+- Windows Server
+- Linux Server
+- Kali Server (Primary platform used for this analysis)
+  
 ### Tools Used
 
 - Nmap: For active scanning and device enumeration
 - Wireshark: For passive packet capture and protocol analysis
 - VirtualBox: For lab environment deployment and simulation scenarios.
 
+
 ## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
 
-Every screenshot should have some text explaining what the screenshot is about.
+<img width="313" height="100" alt="image" src="https://github.com/user-attachments/assets/357772ac-688d-4eb9-b6b3-351034dfdd2d" />
 
-Example below.
+Fig .1.1 Nmap scan results showing that the device at IP address 10.0.2.1 is active and running a DNS service. This confirms the presence of a networked system and helps identify what services are exposed.
 
-*Ref 1: Network Diagram*
+Recommended Screenshots *delete later*
+- Nmap scan output identifying devices and open ports
+- Wireshark packet capture filtered by IP
+- OS and service verification on each machine
+- Network topology diagram with IP ranges
+
