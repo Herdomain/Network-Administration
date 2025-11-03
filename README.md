@@ -36,7 +36,7 @@ The final deliverable was a structured report presenting this information in a f
 
 <img width="313" height="100" alt="image" src="https://github.com/user-attachments/assets/357772ac-688d-4eb9-b6b3-351034dfdd2d" />
 
-Fig .1.1 Nmap scan results showing that the device at IP address 10.0.2.1 is active and running a DNS service. This confirms the presence of a networked system and helps identify what services are exposed.
+Fig .1.1 Scan results showing that the device at IP address 10.0.2.1 is active and running a DNS service. This confirms the presence of a networked system and helps identify what services are exposed.
 
 Recommended Screenshots *delete later*
 - Nmap scan output identifying devices and open ports
