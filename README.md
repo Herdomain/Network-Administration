@@ -2,7 +2,9 @@
 
 ## Executive Summary
 
-This project focuses on establishing comprehensive visibility into network assets within a simulated lab environment. Using industry-standard tools such as Nmap and Wireshark, I conducted detailed scans to identify active devices, services, and communication patterns. The project emphasizes the importance of accurate asset inventory as a foundational component of risk management and compliance. Findings were validated through cross-tool analysis, and all discoveries were documented in a structured report that aligns with audit and governance reporting standards. This work reflects core competencies in data verification, documentation integrity, and the ability to translate technical observations into actionable security insights.
+This project focuses on improving visibility into network assets within a simulated lab environment. Using Nmap and Wireshark on a Kali virtual machine, I performed scans to identify devices, services, and communication patterns. The lab included a Windows Server and a Linux Server, and all data collected through scanning was verified directly on the devices.
+
+The results were compiled into a structured report that includes an asset inventory, key findings from the network traffic analysis, and a basic network topology with recommendations. This project highlights the importance of accurate documentation and asset identification as part of risk awareness and supports foundational practices aligned with audit readiness and system monitoring.
 
 ## Objective
 
