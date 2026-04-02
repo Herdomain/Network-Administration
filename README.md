@@ -3,6 +3,8 @@
 ## Overview
 I analyzed the 2011 Sony PlayStation Network (PSN) data breach to understand how large-scale cyberattacks occur, how organizations respond, and what security improvements are required to prevent similar incidents.
 
+Aligned with NIST incident response principles and MITRE ATT&CK techniques.
+
 ## Problem
 I wanted to examine how delayed detection, weak security controls, and poor incident response can lead to large-scale data breaches, financial loss, and reputational damage.
 
