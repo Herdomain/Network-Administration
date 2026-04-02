@@ -1,104 +1,73 @@
-# 🌐 Network Analysis with Wireshark & Nmap
+# 🎮 PSN Data Breach Analysis & Incident Response (Case Study)
 
-## 📌 Overview
-In this project, I explored how network traffic and system information can be analyzed using Wireshark and Nmap.
+## Overview
+I analyzed the 2011 Sony PlayStation Network (PSN) data breach to understand how large-scale cyberattacks occur, how organizations respond, and what security improvements are required to prevent similar incidents.
 
-My goal was to understand how much information can be gathered from a network and why monitoring and securing that information is important.
+## Problem
+I wanted to examine how delayed detection, weak security controls, and poor incident response can lead to large-scale data breaches, financial loss, and reputational damage.
 
----
+## Approach
+- I analyzed the timeline of the PSN breach from initial intrusion to full recovery  
+- I identified attack vectors such as network vulnerabilities and possible SQL injection  
+- I examined the impact on users, systems, and business operations  
+- I evaluated Sony’s incident response and recovery strategy  
+- I mapped mitigation strategies to industry best practices (NIST, MITRE, CIS)  
+- I identified security improvements to prevent future attacks  
 
-## ⚙️ What I Did
+## Key Decisions
+- **Timeline analysis:** I structured the breach events chronologically to understand detection delays and response gaps  
+- **Attack analysis:** I focused on likely techniques (e.g., SQL injection, unpatched vulnerabilities) to connect theory to real-world attacks  
+- **Framework alignment:** I mapped mitigation strategies to industry standards (NIST, MITRE ATT&CK, CIS Controls)  
 
-I used two main tools:
+## Results
+- I identified key failures in detection and delayed response that increased breach impact  
+- I demonstrated how weak security controls led to large-scale data exposure (~77 million users) :contentReference[oaicite:0]{index=0}  
+- I showed how improved incident response and security practices could reduce damage  
 
-- **Wireshark** to capture and analyze live network traffic  
-- **Nmap** to scan the network and identify devices, open ports, and services  
+## Detection & Response Scenario
+If a similar breach occurred, I would:
 
-By combining these tools, I was able to:
-- Identify devices on the network  
-- Observe how they communicate  
-- Understand potential security risks  
+1. **Validate the alert**
+   - Identify unusual network activity or unauthorized access  
+   - Confirm scope of affected systems  
 
----
+2. **Investigate the source**
+   - Analyze logs for attack patterns (e.g., SQL injection, abnormal queries)  
+   - Identify compromised systems and data  
 
-## 🧪 Environment Setup
+3. **Escalate if necessary**
+   - Notify SOC, leadership, and compliance teams  
+   - Assess severity and regulatory impact  
 
-I set up three virtual machines:
+4. **Containment actions**
+   - Isolate affected systems  
+   - Disable compromised accounts  
+   - Block malicious access  
 
-- Windows Server  
-- Linux Server (Ubuntu)  
-- Kali Linux (used for scanning and monitoring)  
+5. **Eradication & recovery**
+   - Patch vulnerabilities  
+   - restore systems from backups  
+   - strengthen monitoring and detection  
 
-All scans and traffic captures were performed from the Kali machine.
+6. **Post-incident improvement**
+   - conduct lessons learned  
+   - improve response time and communication  
 
----
+## Example Outputs
+***
+- Data breach timeline visualization  
+- Incident response analysis  
+- Security recommendations  
 
-## 🖼️ Sample Observations
+*(Add your timeline image here — this is strong visual proof)*
 
-🔹 TCP Handshake (Wireshark)
-![TCP Handshake](https://github.com/Herdomain/Network-Administration/blob/main/images/tcp_handshake.jpg)
-Fig 1.1. This capture shows a successful TCP 3-way handshake between two devices, confirming active communication over port 80.
+## Impact
+- I demonstrated understanding of real-world data breaches and attack techniques  
+- I analyzed how incident response failures increase organizational risk  
+- I connected security improvements to industry frameworks and best practices  
 
----
-🔹 Packet Details (MAC Address Identification)
-![Packet Details](https://github.com/Herdomain/Network-Administration/blob/main/images/packet_details.jpg)
-Fig 1.2. From this packet, I was able to identify both source and destination MAC addresses and confirm communication between devices.
-
----
-
-🔹 TCP Stream Analysis
-![TCP Stream](https://github.com/Herdomain/Network-Administration/blob/main/images/tcp_stream.jpg)
-
-Fig. 1.3. This stream shows HTTP communication and confirms the server is running on port 80 (Ubuntu).
-
----
-
-- Cross-verification between Nmap results and Wireshark captures  
-
-## 📊 Key Findings
-
-Through this analysis, I:
-
-- Identified multiple active devices on the network  
-- Discovered open ports such as:
-  - **80 (HTTP)**  
-  - **21 (FTP)**  
-  - **3306 (MySQL)**  
-- Observed real communication between devices using TCP handshakes  
-- Matched Nmap scan results with Wireshark packet data  
-- Confirmed how much system and network information can be exposed during scans  
-
----
-
-## 🎯 Why This Matters
-
-This project helped me understand that:
-
-- Even a basic network scan can reveal detailed system information  
-- Open ports can expose services that may be vulnerable  
-- Network traffic contains valuable insights into system behavior  
-- Using multiple tools together provides better visibility than using one alone  
-
----
-
-## 🔐 Security Value
-
-This project demonstrates my ability to:
-
-- Discover devices and services on a network  
-- Analyze real network traffic  
-- Identify potential exposure points  
-- Validate findings across multiple tools  
-- Build a stronger understanding of network security fundamentals  
-
----
-
-## 📄 Full Report
-
-See the full detailed analysis and screenshots here:   
-👉 [View Full Report](https://docs.google.com/document/d/1FKf9LDBcs-WIxNXnED4KflNUIGKqHZ7Cfl-1yNpHu9s/edit?usp=sharing)
-
-
-
-
+## Next Steps
+- I would simulate this breach in a lab environment  
+- I would map attack techniques directly to MITRE ATT&CK  
+- I would build detection rules for similar attack patterns  
 
