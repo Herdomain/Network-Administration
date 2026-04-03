@@ -1,6 +1,6 @@
 # 🎮 PSN Data Breach Analysis & Incident Response
 
-In April 2011, Sony's PlayStation Network was taken offline for 23 days following a breach that exposed the personal and financial data of approximately 77 million users. It remains one of the most studied cybersecurity failures in corporate history — not just because of its scale, but because of how long it went undetected and how poorly it was handled once discovered.
+In April 2011, Sony's PlayStation Network was taken offline for 23 days following a breach that exposed the personal and financial data of approximately 77 million users. It remains one of the most studied cybersecurity failures in corporate history, not just because of its scale, but because of how long it went undetected and how poorly it was handled once discovered.
 
 This case study breaks down what went wrong, why it went wrong, and what a stronger response would have looked like.
 
@@ -8,7 +8,7 @@ This case study breaks down what went wrong, why it went wrong, and what a stron
 
 ## What Happened
 
-Attackers exploited unpatched network vulnerabilities — likely through SQL injection — to gain unauthorized access to Sony's infrastructure. Once inside, they moved through the network undetected, exfiltrating names, addresses, email addresses, passwords, and payment card data before Sony identified the intrusion.
+Attackers exploited unpatched network vulnerabilities, likely through SQL injection, to gain unauthorized access to Sony's infrastructure. Once inside, they moved through the network undetected, exfiltrating names, addresses, email addresses, passwords, and payment card data before Sony identified the intrusion.
 
 The breach wasn't just a technical failure. Delayed detection, slow public disclosure, and an absence of encryption on sensitive data turned a serious incident into a reputational and regulatory crisis.
 
