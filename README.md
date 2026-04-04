@@ -2,7 +2,9 @@
 
 DHAEI is a growing software development and internet services company 
 operating across multiple branch offices, hybrid cloud environments, and 
-remote endpoints. This project applies the ISO 27001 Risk Management 
+remote endpoints. 
+
+This project applies the ISO 27001 Risk Management 
 Framework to identify, assess, and treat the most critical security risks 
 facing DHAEI's infrastructure and operations.
 
@@ -99,6 +101,7 @@ ISO 27001 Annex A.9.
 Enforce full disk encryption on FSI during the transition period. 
 Restrict access to Brampton user data to authorized personnel only. 
 Implement a formal data migration checklist with sign-off requirements. 
+
 Aligned with ISO 27001 Annex A.8 and NIST SP 800-111.
 
 ---
