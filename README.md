@@ -1,42 +1,105 @@
-# 🔍 Risk Monitoring & Threat Detection (PRTG + IoCs)
+# 🔍 Risk Management Plan — DHAEI Case Study
 
-Threats that go unmonitored go undetected.
-
-This project designs a proactive monitoring strategy using Paessler PRTG across three critical business systems, an SQL database, a Linux development environment, and an IIS web server,  mapping each to real-world Indicators of Compromise before an incident occurs.
-
----
-
-## Why These Systems
-
-Each monitored asset was selected based on data sensitivity and business impact:
-
-- **SQL Database** — Holds proprietary and financial data; primary target for exfiltration and injection attacks
-- **Linux Development Environment** — Exposed to privilege escalation and unauthorized access attempts
-- **IIS Web Server** — Public-facing attack surface vulnerable to brute force, DDoS, and web application exploits
+DHAEI is a growing software development and internet services company 
+operating across multiple branch offices, hybrid cloud environments, and 
+remote endpoints. This project applies the ISO 27001 Risk Management 
+Framework to identify, assess, and treat the most critical security risks 
+facing DHAEI's infrastructure and operations.
 
 ---
 
-## Monitoring Strategy
+## Organization Overview
 
-Each system is assigned PRTG sensors with defined alert thresholds tied directly to known attack behaviors.
+DHAEI is led by CEO **Alan Hake**, with operations managed across three 
+executive functions:
 
-Thresholds are calibrated against expected baseline activity to balance detection accuracy and minimize alert fatigue.
+- **Amanda Wilson (CIO)** — oversees IT infrastructure, security, and 
+  systems management
+- **Richard Xavier (COO)** — oversees networking, corporate security, 
+  and helpdesk operations
+- **Rachel Xieng (CFO)** — oversees financial operations and risk exposure
 
-| System | Sensor Focus | IoCs Monitored |
-|---|---|---|
-| SQL Database | Query volume, authentication events | Unusual query patterns, failed logins, data exfiltration |
-| Linux Environment | CPU load, user activity, process monitoring | Privilege escalation, unauthorized access, abnormal processes |
-| IIS Web Server | Bandwidth usage, request rates, error codes | Brute force attempts, DDoS patterns, suspicious traffic spikes |
+Security is managed under the CIO by **Paul Alexander (CISO)**, supported 
+by one security technician (Harold Fry), one intern (Lewis Mableton), and 
+one vacant technician position — a staffing gap that directly increases 
+operational risk.
 
 ---
 
-## If a Threat Were Detected
+## Risk Environment
 
-1. **Validate** — Confirm abnormal sensor activity against established baseline behavior
-2. **Investigate** — Identify affected systems and entry points; analyze logs for attack patterns
-3. **Escalate** — Notify stakeholders based on severity classification; document findings and potential impact
-4. **Contain** — Block suspicious IPs, sessions, or processes; isolate affected systems if needed
-5. **Improve** — Tune thresholds and expand sensor coverage based on findings
+DHAEI's infrastructure introduces several compounding vulnerabilities:
+
+- **Hybrid cloud workloads** across Rackspace and AWS with varied 
+  security configurations
+- **Distributed branch offices** each running RODCs with a single 
+  support technician and limited oversight
+- **20 remote programmers** connecting via L2TP VPN from home offices 
+  on company-issued laptops
+- **New Brampton branch office** temporarily storing user data on the 
+  main file server FSI during transition — an elevated exposure window
+- **One unfilled security technician position** reducing detection and 
+  response capacity across the team
+
+---
+
+## Top Three Identified Risks
+
+| Risk | CIA Impact | Likelihood (0–5) | Impact (0–10) |
+|---|---|---|---|
+| Unauthorized access via compromised VPN credentials | Confidentiality, Integrity | 4 | 8 |
+| Data exposure during Brampton branch office transition | Confidentiality, Availability | 3 | 7 |
+| Insider threat from privileged account misuse | Confidentiality, Integrity, Availability | 3 | 9 |
+
+---
+
+## Risk Ownership Chain
+
+**Unauthorized VPN Access**
+- Ground level: Harold Fry (Security Technician) — monitors authentication 
+  logs and flags anomalies
+- Mid level: Paul Alexander (CISO) — owns the security policy and response 
+  protocol
+- Executive level: Amanda Wilson (CIO) — accountable for infrastructure 
+  security decisions and escalation to CEO
+
+**Data Exposure During Branch Transition**
+- Ground level: Branch support technician — monitors local data handling 
+  during migration
+- Mid level: William Freund (Manager, Systems) — oversees server 
+  configuration and data movement
+- Executive level: Richard Xavier (COO) — accountable for operational 
+  continuity and risk to business operations
+
+**Privileged Account Misuse**
+- Ground level: Lewis Mableton (Intern) / Harold Fry — monitors access 
+  logs for anomalous privileged activity
+- Mid level: Paul Alexander (CISO) — enforces least privilege and 
+  access control policies
+- Executive level: Amanda Wilson (CIO) and Rachel Xieng (CFO) — 
+  accountable for compliance and financial risk exposure
+
+---
+
+## Risk Treatment Recommendations
+
+**Priority 1 — Unauthorized VPN Access**
+Enforce MFA on all L2TP VPN connections for remote programmers. 
+Implement continuous session monitoring and anomaly detection. 
+Aligned with NIST SP 800-207 Zero Trust principles and 
+ISO 27001 Access Control (Annex A.9).
+
+**Priority 2 — Privileged Account Misuse**
+Apply role-based access control (RBAC) scoped to job function. 
+Conduct quarterly access reviews. Deploy user activity monitoring 
+across privileged accounts. Aligned with CIS Controls v8 and 
+ISO 27001 Annex A.9.
+
+**Priority 3 — Data Exposure During Branch Transition**
+Enforce full disk encryption on FSI during the transition period. 
+Restrict access to Brampton user data to authorized personnel only. 
+Implement a formal data migration checklist with sign-off requirements. 
+Aligned with ISO 27001 Annex A.8 and NIST SP 800-111.
 
 ---
 
@@ -44,19 +107,19 @@ Thresholds are calibrated against expected baseline activity to balance detectio
 
 | Framework | Application |
 |---|---|
-| NIST SP 800-61 | Incident detection and response structure |
-| MITRE ATT&CK | IoC mapping to known attack techniques |
-| CIS Controls | Asset prioritization and monitoring best practices |
+| ISO/IEC 27001:2022 | Risk assessment methodology, access control, asset management |
+| NIST SP 800-207 | Zero Trust principles for remote access |
+| CIS Controls v8 | Privileged access management, continuous monitoring |
+| NIST SP 800-111 | Storage encryption for portable and transitional data |
 
 ---
 
 ## Artifacts & Outputs
 
-- Sensor configuration and threshold definitions per system
-  
-- IoC mapping table linking sensors to real-world attack patterns
-  
-- Monitoring coverage map across critical assets
+- Risk Assessment Table (assets, threats, vulnerabilities, CIA impact)
+- Risk Treatment Table with prioritized mitigations
+- Statement of Applicability (SOA)
+- Organizational risk ownership chain
+- Executive summary written for non-technical leadership
 
-> 📌 *Sensor table and PRTG screenshots coming soon.*
-
+> 📌 *Risk assessment tables and executive summary coming soon.*
